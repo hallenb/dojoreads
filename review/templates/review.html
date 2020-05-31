@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Review</title>
+    {% load static %}
+    <link rel="stylesheet" href= "{% static 'css/review.css' %}" >
+</head>
+<body>
+    <div id="wrapper">
+        <a href="/books">Home</a>
+        <a href="/logout">Logout</a>
+        <div id="header">
+            <h3>{{book.title}}</h3>
+            <p>Author: {{book.author.name}} </p>
+        </div>
+        <div id="reviews">
+            <h3>Reviews:</h3>
+            {% for b in book.review.all %}
+            <div class='book'>
+                <h4>Rating: {{b.rating}}</h4>
+                <h4><a class="person" href="/user/{{b.user.id}}">{{b.user.alias}}</a> says: {{b.review}}</h4>
+                <h5>Posted on {{b.created_at}} </h5>
+            </div>
+            {% endfor %}
+        </div>
+        <form action="/newReview/{{book.id}}" method=POST>
+            {% csrf_token %}
+            <h4>Add a Review:</h4>
+            <textarea name="review"></textarea>
+            <h4>Rating:</h4>
+            <select name="rating">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+            <h4>stars.</h4>
+            <button type="submit">Submit Review</button>
+        </form>
+    </div>
+</body>
+</html>

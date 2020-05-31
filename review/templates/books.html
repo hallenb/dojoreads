@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books Home</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/book.css' %}">
+</head>
+<body>
+    <div id="wrapper">
+        <div id="header">
+            <h2>Welcome, {{request.session.alias}}!</h2>
+            <a href="/addReview">Add Book and Review</a>
+            <a href="/logout">Logout</a>
+        </div>
+        <div id="reviews">
+            <h3>Recent Book Reviews:</h3>
+            {% for r in review %}
+            <h3 class="recentBook"><a href="/books/{{r.book.id}}">{{r.book.title}}</a></h3>
+            <p>rating {{r.rating}}</p>
+            <p><a href="user/{{r.user.id}}">{{r.user.alias}}</a> says: {{r.review}}</p>
+            {% endfor %}
+        </div>
+        <div id="other">
+            <h3>Other Books with Reviews:</h3>
+            <div id= "booklist">
+                {% for b in book  %}
+                   <p><a href="/books/{{b.id}}">{{b.title}}</a></p> 
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</body>
+</html>

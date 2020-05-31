@@ -1,0 +1,28 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+#wrapper{
+    width: 600px;
+    margin: 0px auto;
+}
+a{
+    margin-left: 25px;
+}
+.header{
+    margin-left: 305px;
+}
+
+h2{
+    margin-top: 25px;
+}
+h3{
+    margin-top: 15px;
+}
+#books{
+    margin-top: 30px;
+}
+li{
+    margin-top: 10px;
+    list-style: none;
+}

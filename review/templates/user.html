@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Review</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/user.css' %} ">
+</head>
+<body>
+    <div id="wrapper">
+        <a class="header" href="/books">Home</a>
+        <a href="/addreview">Add Book and Review</a>
+        <a href="/logout">Logout</a>
+        <div id="info">
+            <h2>User Alias: {{user.alias}}</h2>
+            <h3>Name: {{user.name}}</h3>
+            <h3>Email: {{user.email}}</h3>
+            <h3>Total Reviews: {{user.review.all.count}}</h3>
+        </div>
+        <div id="books">
+            <h3>Posted Reviews on the following books.</h3>
+            <ul>
+                {% for b in user.review.all  %}
+                <li><a href="\books/{{b.book.id}}">{{b.book.title}}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,44 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+#wrapper{
+    width: 900px;
+    margin: 0px auto;
+    padding: 20px;
+}
+h2{
+    display: inline-block;
+    margin-right: 425px;
+    vertical-align: top;
+    margin-bottom: 40px;
+}
+a{
+    margin-left: 20px;
+}
+#other a{
+    margin-left: 25px;
+}
+#reviews, #other{
+    display: inline-block;
+    vertical-align: top;
+    width: 447px;
+
+}
+h3:first-of-type{
+    margin-bottom: 20px;
+}
+p{
+    margin-bottom: 15px;
+}
+#booklist{
+    width: 350px;
+    height: 150px;
+    overflow-y: scroll;
+}
+.recentbook{
+    margin-bottom: 6px;
+}
+#reviews a{
+    margin-left: 0px;
+}

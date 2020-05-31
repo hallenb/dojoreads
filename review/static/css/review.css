@@ -1,0 +1,60 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    /* outline: 1px dashed red; */
+}
+#wrapper{
+    width: 805px;
+    margin: 0px auto;
+    padding: 20px;
+}
+a:first-of-type{
+    padding-left: 688px;
+    padding-right: 25px;
+}
+#header{
+    margin-bottom: 25px;
+}
+h3:first-of-type{
+    margin-bottom: 10px;
+}
+#reviews{
+    width: 450px;
+    display: inline-block;
+}
+.book{
+    border-top: 2px solid black;
+    padding: 10px;
+}
+.book h4{
+    margin-bottom: 10px;
+}
+#reviews .person{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+form{
+    width: 300px;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 50px;
+}
+textarea{
+    width: 295px;
+    height: 50px;
+    margin-bottom: 7px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+form h4, form select{
+    display: inline-block;
+    margin-right: 5px;
+}
+button{
+    display: block;
+    margin-top: 10px;
+    border-radius: 5px;
+    padding: 2px 5px;
+    border: 1px solid black;
+    margin-left: 199px;
+}
